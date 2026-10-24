@@ -17,7 +17,7 @@
     "lint:fix": "oxlint --fix"
   },
   "dependencies": {
-    "astro": "^7.4.2"
+    "astro": "6.4"
   },
   "devDependencies": {
     "lightningcss": "^1.33.0",
