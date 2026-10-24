@@ -1,0 +1,38 @@
+# build output
+dist/
+
+# generated types
+.astro/
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+.playwright-cli/*
+
+# environment variables
+.env
+.env.production
+
+# cloudflare wrangler state
+.wrangler/
+
+# clerk local auth state
+.clerk/
+
+# macOS-specific files
+.DS_Store
+
+# jetbrains setting folder
+.idea/
+
+.vscode/*
+!extensions.json
+!settings.json
+
+# codegraph
+.codegraph
