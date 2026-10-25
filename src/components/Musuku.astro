@@ -1,1 +1,14 @@
+---
+import CopyBtn from '@/components/copy-button/CopyButton.astro'
+---
+
 <h2 class="title">musuku</h2>
+
+<p class="subtitle">
+  Agrega iconos y comando de ejecución a tus AppImage y binarios
+</p>
+
+<div class="code-block">
+  <pre><code data-copy-src>curl -fsSL https://raw.githubusercontent.com/fusoras/musu/main/install.sh | bash</code></pre>
+  <CopyBtn data-copy-target="[data-copy-src]" />
+</div>
