@@ -2,8 +2,8 @@
 import CopyBtn from '@/components/copy-button/CopyButton.astro'
 ---
 
-<h2>fast-alias</h2>
-<p>Simplifica comandos largos, organiza, agrega descripción y categorízalos.</p>
+<h2 class="title">fast-alias</h2>
+<p class="subtitle">Simplifica comandos largos, organiza, agrega descripción y categorízalos.</p>
 
 <div class="code-block">
   <pre><code data-copy-src>curl -fsSL https://raw.githubusercontent.com/fusoras/fast-alias/main/install.sh | sh</code></pre>
@@ -31,6 +31,9 @@ import CopyBtn from '@/components/copy-button/CopyButton.astro'
     </samp>
   </nav>
 </command-viewer>
+
+<button>Más información</button>
+
 <script is:inline type="module" src="/CommandViewer.js"></script>
 <script is:inline>
   document
@@ -46,5 +49,11 @@ import CopyBtn from '@/components/copy-button/CopyButton.astro'
     place-content: center;
     place-items: center;
     gap: 1rem;
+  }
+
+  button {
+    margin-inline: auto;
+    margin-block: var(--space-md);
+    background: var(--accent);
   }
 </style>
