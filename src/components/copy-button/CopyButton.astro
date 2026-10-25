@@ -1,0 +1,93 @@
+<copy-button data-copy-target="[data-copy-src]">
+  <button
+    type="button"
+    class="copy-btn"
+    data-copy
+    aria-label="Copiar texto"
+    title="Copiar texto"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-copy icon-copy"
+      viewBox="0 0 24 24"
+    >
+      <path fill="none" stroke="none" d="M0 0h24v24H0z"></path>
+      <path d="M7 7m0 2.667a2.667 2.667 0 0 1 2.667 -2.667h8.666a2.667 2.667 0 0 1 2.667 2.667v8.666a2.667 2.667 0 0 1 -2.667 2.667h-8.666a2.667 2.667 0 0 1 -2.667 -2.667z"></path>
+      <path d="M4.012 16.737a2.005 2.005 0 0 1 -1.012 -1.737v-10c0 -1.1 .9 -2 2 -2h10c.75 0 1.158 .385 1.5 1"></path>
+    </svg>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="18"
+      height="18"
+      fill="none"
+      stroke="currentColor"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke-width="2"
+      class="icon icon-tabler icons-tabler-outline icon-tabler-check icon-check"
+      viewBox="0 0 24 24"
+    >
+      <path fill="none" stroke="none" d="M0 0h24v24H0z"></path>
+      <path d="M5 12l5 5l10 -10"></path>
+    </svg>
+  </button>
+</copy-button>
+
+<style>
+  copy-button {
+    display: contents;
+
+    --copy-size: 32px;
+    --copy-bg: light-dark(hsl(0deg 0% 96%), hsl(220deg 12% 16%));
+    --copy-icon: light-dark(hsl(220deg 10% 32%), hsl(220deg 10% 82%));
+    --copy-radius: 0.5rem;
+  }
+
+  .copy-btn {
+    width: var(--copy-size);
+    height: var(--copy-size);
+    display: grid;
+    place-items: center;
+    padding: 0;
+    border: none;
+    border-radius: var(--copy-radius);
+    background: var(--copy-bg);
+    color: var(--copy-icon);
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+
+    &:hover {
+      background: color-mix(in oklch, var(--copy-bg) 72%, var(--copy-icon));
+    }
+
+    &:active {
+      scale: 0.95;
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--copy-icon);
+      outline-offset: 2px;
+    }
+  }
+
+  .icon-check {
+    display: none;
+  }
+
+  copy-button[data-copied] .icon-copy {
+    display: none;
+  }
+
+  copy-button[data-copied] .icon-check {
+    display: block;
+  }
+</style>
+
+<script src="./CopyButton.js"></script>

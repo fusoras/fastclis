@@ -1,0 +1,50 @@
+---
+import CopyBtn from '@/components/copy-button/CopyButton.astro'
+---
+
+<h2>fast-alias</h2>
+<p>Simplifica comandos largos, organiza, agrega descripción y categorízalos.</p>
+
+<div class="code-block">
+  <pre><code data-copy-src>curl -fsSL https://raw.githubusercontent.com/fusoras/fast-alias/main/install.sh | sh</code></pre>
+  <CopyBtn data-copy-target="[data-copy-src]" />
+</div>
+
+<command-viewer label="Uso basico de fa" prompt="$">
+  <nav label="Listar Recipes & Aliases">
+    <code>fa --list</code>
+    <samp>
+      Recipes: 
+      &nbsp;&nbsp;Usage: fa --new &lt;recipe&gt; &lt;name&gt; (or: fa -n)
+
+      &nbsp;&nbsp;rust-stack · Stack inicial
+    </samp>
+  </nav>
+  <nav label="Listar solo Alias">
+    <code> fa --list alias</code>
+    <samp>
+      Aliases:
+      &nbsp;&nbsp;Usage: fa &lt;name&gt;  (or: fa -a &lt;name&gt;)
+
+      &nbsp;&nbsp;hello:
+      &nbsp;&nbsp;&nbsp;&nbsp;example · Example alias
+    </samp>
+  </nav>
+</command-viewer>
+<script is:inline type="module" src="/CommandViewer.js"></script>
+<script is:inline>
+  document
+    .querySelector('command-viewer')
+    .addEventListener('command-step-change', e => {
+      console.log(e.detail.index, e.detail.total)
+    })
+</script>
+
+<style>
+  .code-block {
+    display: flex;
+    place-content: center;
+    place-items: center;
+    gap: 1rem;
+  }
+</style>

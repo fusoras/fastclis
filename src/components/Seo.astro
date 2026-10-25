@@ -3,6 +3,7 @@ import { SEO, SITE_URL } from '@/config.ts'
 const { title = SEO.title, description = SEO.description } = Astro.props
 const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href
 ---
+
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <title>{title}</title>
@@ -20,25 +21,20 @@ const canonicalUrl = new URL(Astro.url.pathname, SITE_URL).href
     media="(prefers-color-scheme: light)"
 /> -->
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
-<link
-    rel="icon"
-    href="/favicon-192x192.png"
-    type="image/png"
-    sizes="192x192"
-/>
+<link rel="icon" href="/favicon-192x192.png" type="image/png" sizes="192x192" />
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
 <!-- <link rel="manifest" href="/site.webmanifest" /> -->
 
 <meta name="description" content={description} />
 <meta
-    name="robots"
-    content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
+  name="robots"
+  content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1"
 />
 <meta name="author" content={SEO.author} />
 <meta
-    name="theme-color"
-    content="#1a1a1a"
-    media="(prefers-color-scheme: dark)"
+  name="theme-color"
+  content="#1a1a1a"
+  media="(prefers-color-scheme: dark)"
 />
 <!-- <meta
     name="theme-color"
