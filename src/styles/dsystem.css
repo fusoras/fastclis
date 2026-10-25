@@ -9,7 +9,7 @@ body {
   /* COLORS */
   --fg: #fafaf2;
   --bg: #1c1b1a;
-  --accent: #c96443;
+  --accent: rgb(58 169 159);
   --accent-dark: color-mix(in srgb, var(--accent), #000 30%);
   --border: #ffffff40;
 

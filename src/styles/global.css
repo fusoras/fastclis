@@ -1,5 +1,30 @@
 @import url('dsystem.css');
 
-h2 {
+@font-face {
+  font-family: terminal-grotesque;
+  src: url("terminal-grotesque.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  padding: var(--space-md);
+}
+
+@font-face {
+  font-family: petrona;
+  src: url("petrona-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+.title {
+  font-family: terminal-grotesque;
   text-align: center;
+}
+
+.subtitle {
+  font-family: petrona;
 }
